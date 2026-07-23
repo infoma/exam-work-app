@@ -1,0 +1,104 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandardRoom = void 0;
+const typeorm_1 = require("typeorm");
+let StandardRoom = class StandardRoom {
+};
+exports.StandardRoom = StandardRoom;
+__decorate([
+    (0, typeorm_1.PrimaryColumn)('uuid'),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'uuid' }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "siteStandardId", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 20 }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "roomNumber", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 100, nullable: true }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "roomName", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', nullable: true }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "floor", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 50, nullable: true }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "building", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', default: 30 }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "totalSeats", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', default: 30 }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "availableSeats", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', default: 2 }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "spareSeats", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 20, default: '标准考场' }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "roomType", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'boolean', default: false }),
+    __metadata("design:type", Boolean)
+], StandardRoom.prototype, "hasProjector", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'boolean', default: false }),
+    __metadata("design:type", Boolean)
+], StandardRoom.prototype, "hasComputer", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'boolean', default: false }),
+    __metadata("design:type", Boolean)
+], StandardRoom.prototype, "hasAirConditioner", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'boolean', default: true }),
+    __metadata("design:type", Boolean)
+], StandardRoom.prototype, "hasClock", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', default: 0 }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "cameraCount", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'integer', default: 0 }),
+    __metadata("design:type", Number)
+], StandardRoom.prototype, "signalDetectorCount", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'varchar', length: 20, default: '正常' }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "status", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'boolean', default: true }),
+    __metadata("design:type", Boolean)
+], StandardRoom.prototype, "isActive", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'text', nullable: true }),
+    __metadata("design:type", String)
+], StandardRoom.prototype, "remarks", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)({ type: 'datetime' }),
+    __metadata("design:type", Date)
+], StandardRoom.prototype, "createdAt", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)({ type: 'datetime' }),
+    __metadata("design:type", Date)
+], StandardRoom.prototype, "updatedAt", void 0);
+exports.StandardRoom = StandardRoom = __decorate([
+    (0, typeorm_1.Entity)('standard_rooms')
+], StandardRoom);
+//# sourceMappingURL=standard-room.entity.js.map

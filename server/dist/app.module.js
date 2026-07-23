@@ -22,6 +22,9 @@ const reports_module_1 = require("./modules/reports/reports.module");
 const mock_module_1 = require("./modules/mock/mock.module");
 const ai_module_1 = require("./modules/ai/ai.module");
 const data_init_module_1 = require("./modules/data-init/data-init.module");
+const source_schools_module_1 = require("./modules/source-schools/source-schools.module");
+const staffs_module_1 = require("./modules/staffs/staffs.module");
+const site_standards_module_1 = require("./modules/site-standards/site-standards.module");
 const http_exception_filter_1 = require("./common/filters/http-exception.filter");
 const response_interceptor_1 = require("./common/interceptors/response.interceptor");
 const app_controller_1 = require("./app.controller");
@@ -66,6 +69,9 @@ exports.AppModule = AppModule = __decorate([
             mock_module_1.MockModule,
             ai_module_1.AiModule,
             data_init_module_1.DataInitModule,
+            source_schools_module_1.SourceSchoolsModule,
+            staffs_module_1.StaffsModule,
+            site_standards_module_1.SiteStandardsModule,
         ],
         providers: [
             { provide: core_1.APP_FILTER, useClass: http_exception_filter_1.HttpExceptionFilter },
