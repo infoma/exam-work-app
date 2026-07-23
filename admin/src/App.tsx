@@ -7,6 +7,9 @@ import Sites from './pages/Sites';
 import Tasks from './pages/Tasks';
 import Incidents from './pages/Incidents';
 import Reports from './pages/Reports';
+import SourceSchools from './pages/SourceSchools';
+import Staffs from './pages/Staffs';
+import SiteStandards from './pages/SiteStandards';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const token = localStorage.getItem('token');
@@ -34,6 +37,9 @@ const App = () => {
         <Route path="tasks" element={<Tasks />} />
         <Route path="incidents" element={<Incidents />} />
         <Route path="reports" element={<Reports />} />
+        <Route path="source-schools" element={<SourceSchools />} />
+        <Route path="staffs" element={<Staffs />} />
+        <Route path="site-standards" element={<SiteStandards />} />
       </Route>
     </Routes>
   );

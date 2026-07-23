@@ -7,20 +7,34 @@ import {
   CheckSquareOutlined, 
   AlertOutlined, 
   FileTextOutlined,
+  TeamOutlined,
+  AuditOutlined,
+  SafetyCertificateOutlined,
   UserOutlined,
   LogoutOutlined
 } from '@ant-design/icons';
 import { useNavigate, Outlet } from 'react-router-dom';
+import type { MenuProps } from 'antd';
 
 const { Header, Sider, Content } = AntLayout;
 
-const menuItems = [
+const menuItems: MenuProps['items'] = [
   { key: '/', label: '工作台', icon: <DashboardOutlined /> },
   { key: '/exams', label: '考试项目', icon: <BookOutlined /> },
   { key: '/sites', label: '考点管理', icon: <EnvironmentOutlined /> },
   { key: '/tasks', label: '任务中心', icon: <CheckSquareOutlined /> },
   { key: '/incidents', label: '异常事件', icon: <AlertOutlined /> },
   { key: '/reports', label: '报告管理', icon: <FileTextOutlined /> },
+  {
+    key: 'exam-admin',
+    label: '考务管理',
+    icon: <AuditOutlined />,
+    children: [
+      { key: '/source-schools', label: '生源学校', icon: <TeamOutlined /> },
+      { key: '/staffs', label: '工作人员', icon: <TeamOutlined /> },
+      { key: '/site-standards', label: '考点标准化', icon: <SafetyCertificateOutlined /> },
+    ],
+  },
 ];
 
 const Layout = () => {
@@ -35,7 +49,7 @@ const Layout = () => {
     navigate('/login');
   };
 
-  const userMenu = [
+  const userMenu: MenuProps['items'] = [
     { key: 'profile', label: '个人信息', icon: <UserOutlined /> },
     { type: 'divider' },
     { key: 'logout', label: '退出登录', icon: <LogoutOutlined />, onClick: handleLogout },
