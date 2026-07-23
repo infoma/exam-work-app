@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InitialDataSeed = void 0;
 const uuid_1 = require("uuid");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const user_entity_1 = require("../../modules/users/entities/user.entity");
 const role_entity_1 = require("../../modules/rbac/entities/role.entity");
 class InitialDataSeed {
