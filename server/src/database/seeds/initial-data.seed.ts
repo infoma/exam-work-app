@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { User } from '../../modules/users/entities/user.entity';
 import { Role, ScopeType } from '../../modules/rbac/entities/role.entity';
 
