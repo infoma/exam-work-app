@@ -20,6 +20,9 @@ export class AppController {
         files: '/api/files',
         reports: '/api/reports',
         mock: '/api/mock',
+        sourceSchools: '/api/source-schools',
+        staffs: '/api/staffs',
+        siteStandards: '/api/site-standards',
       },
     };
   }
@@ -44,6 +47,21 @@ export class AppController {
         'POST /api/reports/generate': '生成报告',
         'POST /api/reports/:id/ai-summary': 'AI 总结',
         'GET /api/mock/dashboard': '模拟仪表盘数据',
+        'GET /api/source-schools': '生源学校列表',
+        'POST /api/source-schools': '创建生源学校',
+        'GET /api/source-schools/:id': '生源学校详情',
+        'GET /api/source-schools/:schoolId/service-records': '学校服务记录',
+        'GET /api/staffs': '工作人员列表',
+        'POST /api/staffs': '创建工作人员',
+        'GET /api/staffs/:id': '工作人员详情',
+        'GET /api/staffs/:staffId/trainings': '培训记录',
+        'GET /api/staffs/:staffId/assignments': '分配记录',
+        'GET /api/site-standards': '考点标准化列表',
+        'POST /api/site-standards': '创建考点',
+        'GET /api/site-standards/:id': '考点详情',
+        'GET /api/site-standards/:siteId/rooms': '考场列表',
+        'GET /api/site-standards/:siteId/inspections': '检查记录',
+        'GET /api/site-standards/:siteId/facilities': '设施设备列表',
       },
     };
   }

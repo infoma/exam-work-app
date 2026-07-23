@@ -13,6 +13,9 @@ import { ReportsModule } from './modules/reports/reports.module';
 import { MockModule } from './modules/mock/mock.module';
 import { AiModule } from './modules/ai/ai.module';
 import { DataInitModule } from './modules/data-init/data-init.module';
+import { SourceSchoolsModule } from './modules/source-schools/source-schools.module';
+import { StaffsModule } from './modules/staffs/staffs.module';
+import { SiteStandardsModule } from './modules/site-standards/site-standards.module';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { ResponseInterceptor } from './common/interceptors/response.interceptor';
 import { AppController } from './app.controller';
@@ -55,6 +58,9 @@ const dbConfig = env.database.type === 'postgres'
     MockModule,
     AiModule,
     DataInitModule,
+    SourceSchoolsModule,
+    StaffsModule,
+    SiteStandardsModule,
   ],
   providers: [
     { provide: APP_FILTER, useClass: HttpExceptionFilter },
